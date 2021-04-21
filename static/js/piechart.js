@@ -1,4 +1,7 @@
 
+var legendRectSize = 18; // defines the size of the colored squares in legend
+var legendSpacing = 2; // defines spacing between squares
+
 var margin = {
         top: 30,
         right: 120,
@@ -86,15 +89,52 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         .call(text => text.append("tspan")
             .attr("y", "-0.4em")
             .attr("font-weight", "bold")
-            .text(d => d.data.name))
+           // .text(d => d.data.name)
+           )
 //--------------------------------------------------
 // CP added this for the title
         svg.append("text")
-        .attr("x", (width / 2))             
+        .attr("x", (width / 10))             
         .attr("y", 0 - (margin.top / 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .style("text-decoration", "underline")  
         .text("Sales by Color");
-//----------------------------------------		
+//----------------------------------------	
+//Legend
+
+var legend = svg.selectAll('.legend') // selecting elements with class 'legend'
+.data(data) // refers to an array of labels from our dataset
+.enter() // creates placeholder
+.append('g') // replace placeholders with g elements
+.attr('class', 'legend') // each g is given a legend class
+.attr('transform', function(d, i) {
+    var height = legendRectSize + legendSpacing; // height of element is the height of the colored square plus the spacing      
+    var offset = height * color.domain().length / 2; // vertical offset of the entire legend = height of a single element & half the total number of elements  
+    var horz = 18 * legendRectSize; // the legend is shifted to the left to make room for the text
+    var vert = i * height - offset; // the top of the element is hifted up or down from the center using the offset defiend earlier and the index of the current element 'i'               
+    return 'translate(' + horz + ',' + vert + ')'; //return translation       
+});
+
+// adding colored squares to legend
+legend.append('rect') // append rectangle squares to legend                                   
+.attr('width', legendRectSize) // width of rect size is defined above                        
+.attr('height', legendRectSize) // height of rect size is defined above                      
+.style('fill', (d,i)=>{
+    return color(d.name)
+}) // each fill is passed a color
+.style('stroke', color) // each stroke is passed a color
+
+
+// adding text to legend
+legend.append('text')
+.attr('x', legendRectSize + legendSpacing)
+.attr('y', legendRectSize - legendSpacing)
+.text(function(d) {
+    return d.name;
+});
+
+
+//----------------------------------
+
 });
