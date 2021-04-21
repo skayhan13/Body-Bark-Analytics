@@ -8,27 +8,19 @@
     for (var i = 0; i < data.length; i++) {
       sizes.push(data[i].product_size);
       sizes_sold.push(data[i].countofsize);
-      // console.log(sizes);
-      // console.log(sizes_sold);
-    }
-      // for (var i = 0; i < data.length; i++) {
-  
-    //     var sizes_sold=data[i].countofsize;
-    //     console.log(sizes);
-    //     console.log(sizes_sold);
-    //   }
-
-    // var trace = [{
-    //   type: 'bar',
-    //   x: sizes,
-    //   y: sizes_sold,
-    //   orientation: 'h',
-    //   text: sizes
-    // }];
+      }  //end for loop
+   
+    var trace = [{
+      type: 'bar',
+      x: sizes,
+      y: sizes_sold,
+     // orientation: 'h',
+      text: sizes
+    }];
               
-    // Plotly.newPlot('bar', trace);
-    console.log(sizes);
-    console.log(sizes_sold);
+    Plotly.newPlot('bar', trace);
+    //console.log(sizes);
+    //console.log(sizes_sold);
 
     });
  

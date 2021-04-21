@@ -17,51 +17,46 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     
     <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
-    <style>
-        body {background-color:#e2d6b5};
-       
-        </style>
+  
   </head>
   
   <body>
    <!-- 
        <script src="static/js/barchart.js"></script> -->
-    <div id="tooltip" class="hidden"></div>
-    <img src="assets/body_bark_shirts2.svg" alt="Body Bark Logo">
-    
+       <div id="tooltip" class="hidden"></div>
+  
     <div class="container">
       <div class="row">
-        <div class.=col-md-12 jumbotron text-center">
-          <h1 style="color:#a7ce38;;">Body Bark Sales</h1>
-          <!-- <p>text here</p> -->
+        <div class="col-md-12 jumbotron text-center">
+          <img src="assets/body_bark_lnk.svg" alt="Body Bark Logo">
+          <h1>Body Bark Data Dashboard</h1>
+          <p>text here</p>
           <script src="static/js/piechart.js"></script>
         </div>
       </div>
       <div class="row">
         <div class="col-md-2">
-            <h5>Sales Volume by Color</h5>
-          <!-- <div class="well">
+          <div class="well">
             <h5>Test Subject ID No.:</h5>
             <select id="selDataset" onchange="buildgraph(this.value)"></select>
-          </div> -->
-          <!-- <div class="panel panel-primary">
+          </div>
+          <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Demographic Info</h3>
             </div>
             <div id="sample-metadata" class="panel-body"></div>
-          </div> -->
+          </div>
           </div>
         <div class="col-md-5">
           <div id="bar"></div>
-          <script src="static/js/barchart_size.js"></script>
         </div>
         <div class="col-md-5">
           <div id="gauge"></div>
-        </div> 
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-
+           <script src="static/js/barchart_size.js"></script>
           <!-- <div id="bubble"></div> -->
         </div>
       </div>

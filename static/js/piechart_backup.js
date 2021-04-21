@@ -57,14 +57,12 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
     data.filter(function(d) {
         //console.log(d);
     });
-     
-    var color = d3.scaleOrdinal()
-           .domain(data.map(d => {
-               return d.category
-           }))
-           .range(["#000000","#D2B48C","#000080","#FFFFFF","#684A3B","#ED2227","#F4F4E7","#FF00FF","#708090","#739ABB"])
-    
-        var arcs = pie(data);
+    var color = d3.scaleOrdinal(["#00ff00","#ff0066","#66ff33","#336600","#006699","#ff6600","#ff9900","#0066ff","#660033","#cc3300","#ff0000","#6600ff","#00cc00","#00ccff","#333399"])
+        .domain(data.map(d => {
+            return d.category
+        }))
+        .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data.length).reverse())
+    var arcs = pie(data);
 	
 	
     svg.append("g")
