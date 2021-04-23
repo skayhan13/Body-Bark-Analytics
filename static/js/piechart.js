@@ -53,7 +53,7 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         toString(res[value.name].value += parseInt(value.value));
         return res;
     }, {});
-    console.log(data)
+    //console.log(data)
     data.filter(function(d) {
         //console.log(d);
     });
@@ -98,7 +98,7 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         svg.append("text")
         .attr("x", (width / 10))             
         .attr("y", 0 - (margin.top / 2))
-        .attr("text-anchor", "middle")  
+        //.attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .style("text-decoration", "underline")  
         .text("Sales by Color");
