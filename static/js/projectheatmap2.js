@@ -25,7 +25,11 @@ d3.csv('resources/zipsheatmap.csv').then(function(data) {
     console.log(heatArray)
     L.heatLayer(heatArray, {
         radius: 100,
-        blur: 35
+        blur: 35,
+        maxIntensity: 88,
+        opacity: 1,
+        dissipating: true
+        
     })
     .addTo(myMap)
 

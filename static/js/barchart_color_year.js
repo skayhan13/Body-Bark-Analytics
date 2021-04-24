@@ -14,7 +14,14 @@
       x: bbcolor,
       y: total,
      // orientation: 'h',
-      text: bbcolor
+      text: bbcolor,
+      marker: {
+        line: {
+          color: 'rgb(8,48,107)',
+          width: 1.5
+        },
+        color: ["#000000","#739ABB", "#ED2227", "#FF00FF", "#F4F4E7", "#684A3B","#D2B48C", "#000080", "#708090","#FFFFFF"]
+      }
     }];
 //----------------------
     var layout = {

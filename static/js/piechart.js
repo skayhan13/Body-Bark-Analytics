@@ -78,16 +78,7 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         
         .attr("d", arc)
         .append("title")
- //-------------------------------    want this to work for title   
-        // svg.append("g")
-        // //.attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
-        // .attr("transform", "translate(" + (width / 2 - 73) + "," + 20 + ")")
-        // .append("text")
-        // .text("Body Bark Internet Color Sales - Totals")
-        // .style("text-decoration", "underline") 
-        // .attr("class", "title")
 
-        //-----------------------------
     svg.append("g")
         .attr("font-family", "sans-serif")
         .attr("font-size", 12)
@@ -101,17 +92,7 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         .attr("font-weight", "bold")
         //  .text(d => d.data.name)
          )
-//--------------------------------------------------
-// CP added this for the title
-        // svg.append("text")
-        // .attr("x", (width / 2))             
-        // .attr("y", 0 - (margin.left / 1))
-        // .attr("text-anchor", "middle")  
-        // .style("font-size", "16px") 
-        // .style("text-decoration", "underline")  
-        // .text("Sales by Color");
-//----------------------------------------	
-//Legend
+
 
 var legend = svg.selectAll('.legend') // selecting elements with class 'legend'
 .data(data) // refers to an array of labels from our dataset
@@ -148,3 +129,28 @@ legend.append('text')
 //----------------------------------
 
 });
+
+
+
+ //-------------------------------    want this to work for title   
+        // svg.append("g")
+        // //.attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
+        // .attr("transform", "translate(" + (width / 2 - 73) + "," + 20 + ")")
+        // .append("text")
+        // .text("Body Bark Internet Color Sales - Totals")
+        // .style("text-decoration", "underline") 
+        // .attr("class", "title")
+
+        //-----------------------------
+
+        //--------------------------------------------------
+// CP added this for the title
+        // svg.append("text")
+        // .attr("x", (width / 2))             
+        // .attr("y", 0 - (margin.left / 1))
+        // .attr("text-anchor", "middle")  
+        // .style("font-size", "16px") 
+        // .style("text-decoration", "underline")  
+        // .text("Sales by Color");
+//----------------------------------------	
+//Legend
