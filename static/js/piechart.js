@@ -97,9 +97,9 @@ d3.csv("resources/barcharttesttake.csv", function(error, inputData) {
         .enter().append("text")
         .attr("transform", d => `translate(${arcLabel().centroid(d)})`)
         .call(text => text.append("tspan")
-            .attr("y", "-0.4em")
-            .attr("font-weight", "bold")
-           // .text(d => d.data.name)
+        .attr("y", "-0.4em")
+        .attr("font-weight", "bold")
+        //  .text(d => d.data.name)
          )
 //--------------------------------------------------
 // CP added this for the title
