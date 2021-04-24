@@ -16,13 +16,8 @@
      // orientation: 'h',
       text: bbcolor
     }];
-//----------------------
-    var layout = {
-      title: "Body Bark Internet Color Sales - Totals",
-      barmode: "group"
-    };
- //-------------------             
-    Plotly.newPlot('bar', trace, layout);
+              
+    Plotly.newPlot('bar', trace);
     // console.log(bbcolor);
     // console.log(yearsold);
 

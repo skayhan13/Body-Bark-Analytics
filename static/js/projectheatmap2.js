@@ -9,11 +9,11 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     maxZoom: 18,
     zoomOffset: -1,
     id: "mapbox/streets-v11",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoianhzNTA3NyIsImEiOiJja242dXhrbnowaHpmMnBsZzh5dTMyZ3JsIn0.74d8rK1nIz_ftE7KPsCieQ"
 }).addTo(myMap);
 
 d3.csv('resources/zipsheatmap.csv').then(function(data) {
-    // console.log(data)
+     console.log(data)
 
 
 

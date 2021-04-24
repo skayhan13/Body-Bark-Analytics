@@ -11,7 +11,8 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
-  <!-- pulled below from 17.2.2 Activity to try to get heatmap working..-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <!-- pulled below from 17.2.2 Activity to try to get heatmap working..-->
  <!--    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" /> -->
  <!-- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script> -->
     <link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1597754760/magicmouse/magic-mouse-1.0.css" />
@@ -56,7 +57,7 @@ body{
 <!-- Regular Bar Chart -->
     <div id='bar'>
       <div class='col-md-6'>
-        <script src="static/js/barchart_color_year.js"></script>
+       <script src="static/js/barchart_color_year.js"></script>
       </div>
     </div>
 
@@ -64,6 +65,7 @@ body{
     <div id='interactivebar'>
       <div class='col-md-6'>
         <div id='vis-container'>
+          <h3>Body Bark Internet Color Sales - By Year</h3>
             <script src="static/js/bar_chart2.js"> </script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
             <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
             <!-- <script src="static/js/app.js"></script> -->
@@ -71,12 +73,18 @@ body{
       </div>
     </div>
 <!-- Heat Map -->
+<div class='col-md-12'>  
     <div id='map'>
-      <div class='col-md-12'>
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script> 
     <!-- Leaflet heatmap plugin-->
-        <script type="text/javascript" src="static/js/projectheatmap2.js"></script>  
+
+       <script src="https://d3js.org/d3.v5.min.js"></script>
+   <!-- <script type="text/javascript" src="static/js/projectheatmap2.js"></script>   -->
         <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
-        </div>
+        <script type="text/javascript" src="static/js/projectheatmap2.js"></script>  
+      
+      
+      </div>
     </div> 
     
 <!--magic mouse-->
