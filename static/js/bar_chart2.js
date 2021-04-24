@@ -17,7 +17,7 @@ d3.csv(fileName, function(error, data) {
     console.log(yearMap);
 });
 
-var makeVis = function(yearMap) {
+   var makeVis = function(yearMap) {
     // Define dimensions of vis
     var margin = { top: 30, right: 50, bottom: 30, left: 50 },
         width  = 700 - margin.left - margin.right,

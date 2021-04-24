@@ -2,7 +2,7 @@ body #magicMouseCursor {
   position: fixed;
   width: 35px;
   height: 35px;
-  border: 1px solid #fff;
+  border: 1px solid #07ce38;
   border-radius: 50%;
   z-index: 9999;
   left: 0;
@@ -18,7 +18,7 @@ body #magicPointer {
   top: 0;
   left: 0;
   position: fixed;
-  background: #fff;
+  background: rgb(69, 172, 69);
   border-radius: 50%;
   pointer-events: none;
   transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; }
@@ -28,7 +28,7 @@ body #magicPointer {
     height: 50px;
     width: 50px;
     background: none;
-    border: 1px solid #fff;
+    border: 1px solid #594541;
     box-shadow: 0px 0px 15px -5px white; }
   body #magicPointer.pointer-overlay {
     height: 50px;
