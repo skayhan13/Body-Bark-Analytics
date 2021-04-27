@@ -36,7 +36,6 @@
       </style> 
   </head>
 
-
 <body>
   <div class='container'>
     <div id="tooltip" class="hidden"></div>
@@ -47,56 +46,69 @@
     <div style="text-align:center;" class="col-md-12">
       <h3>Knowing how products are selling through is an important aspect of sourcing and inventory planning. A small company needs to know not only what styles are selling through but what colors sell best due to minimum buy lots.  The below data shows how colors have sold over the years and the all time counts.</h3>
     </div>
-
+  </div>  <!--end container-->
   <!--bar chart race-->
-    
+  <div class='container'> 
       <div class='row'>
         <div class='col-md-12'>
           <iframe width="100%" height="400" frameborder="0" src="https://observablehq.com/embed/@jxs5077/bar-chart-race?cells=chart"></iframe>
         </div>
-      </div>
-    
+      </div>    <!--div class end bar chart race-->
+         
+   </div>  <!--end container-->   
 <!-- Pie Chart 1-->
-    <div class='row'>
-      <div style="text-align:center;" class='col-md-12'>
+
+  <div class='container'> 
+     <div class="row d-flex justify-content-center">
+      <div class='col-md-12'>
         <div id = 'pie'>
           <script src='static/js/piechart.js'></script>
         </div>
       </div>
-    </div>
-
+    </div>  <!-- End row div -->
+  </div>  <!--end container--> 
+ 
 <!-- Regular Bar Chart -->
-<div class='row'>
+  <div class='container'> 
+    <div class="row">
+
     <div id='bar'>
-      <div class='col-sm-6'>
+      <div class="col-md-12">
        <script src="static/js/barchart_color_year.js"></script>
-      </div>
-    </div>
-
+      </div>  <!-- End class column div -->
+    </div>  <!-- End div id bar -->
+    </div> <!-- End row div -->
+  </div> <!-- End container --> 
 <!-- Interactive Bar-->
+ <div class='container'> 
+  <div class='row'>
+    <!-- <div id='interactivebar'> -->
 
-    <div id='interactivebar'>
-      <div class='col-sm-6'>
-        <div id='vis-container'>
+      <div class='col-md-12' id='vis-container'>
+        <!-- <div id='vis-container'> -->
           <h3>Body Bark Internet Color Sales - By Year</h3>
             <script src="static/js/bar_chart2.js"> </script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
             <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
             <!-- <script src="static/js/app.js"></script> -->
-        </div>
-      </div>
-    </div>  <!-- End row div -->
- </div> <!-- End row div -->
+        <!-- </div>  End class vis-container -->
+      </div>  <!-- End class column div -->
+    <!-- </div>  End interactivebar -->
+   </div> <!-- End row div -->
+
+  </div>  <!--end container--> 
 <!-- Heat Map -->
-<div class='row'>
-    <div class='col-md-12'>  
-      <div id='map' style="height: 400px">
+
+  <div class='container'> 
+    <div class='row'>
+      <div class='col-md-12'>  
+       <div id='map' style="height: 400px">
         <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script> 
         <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
         <script type="text/javascript" src="static/js/projectheatmap2.js"></script>       
-      </div>
-    </div> 
-</div>
-    
+       </div>
+     </div> 
+    </div>
+  </div>  <!--end container-->  
 <!--magic mouse-->
     <script type="text/javascript">
           options = {
@@ -110,6 +122,6 @@
           magicMouse(options);
     </script>
     <script type="text/javascript" src="static/js/magic_mouse.js"></script>
-   </div>  <!--end container -->
+  
 </body>
 </html>

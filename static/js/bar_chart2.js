@@ -1,6 +1,6 @@
 var fileName = "resources/color_count_totals2.csv";
 var bbfields = ["Black", "Natural", "Navy", "White", "Java", "ChiliPepperRed", "Ivory", "FuchsiaPurple", "SlateGray", "Bluestone"];
-
+var barcolor = ["#000000","#D2B48C","#000080","#FFFFFF","#684A3B","#ED2227","#F4F4E7","#FF00FF","#708090","#739ABB"]
 
 d3.csv(fileName, function(error, data) {
     var yearMap = {};
@@ -63,12 +63,19 @@ d3.csv(fileName, function(error, data) {
         .style("text-anchor", "end")
         .text("Value");
 
+        // var color = d3.scaleOrdinal()
+        // .domain(data.map(d => {
+        //     return d.category
+        // }))
+        // .range(["#000000","#D2B48C","#000080","#FFFFFF","#684A3B","#ED2227","#F4F4E7","#FF00FF","#708090","#739ABB"])
+ 
     var updateBars = function(data) {
         // First update the y-axis domain to match data
         yScale.domain( d3.extent(data) );
         yAxisHandleForUpdate.call(yAxis);
 
         var bars = canvas.selectAll(".bar").data(data);
+        
 
         // Add bars for new data
         bars.enter()
@@ -77,7 +84,8 @@ d3.csv(fileName, function(error, data) {
             .attr("x", function(d,i) { return xScale(bbfields[i] ); })
             .attr("width", xScale.bandwidth())
             .attr("y", function(d,i) { return yScale(d); })
-            .attr("height", function(d,i) { return height - yScale(d); });
+            .attr("height", function(d,i) { return height - yScale(d); })
+            .attr("fill", function(d,i) { return barcolor[i]; })
 
         // Update old ones, already have x / width from before
         bars
